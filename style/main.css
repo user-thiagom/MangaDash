@@ -1,6 +1,7 @@
 :root{
     --cinza: #000 ;
     --azul: #87cefa ;
+    --hoverAzul: rgba(87, 160, 188, 0.5);
 }
 
 *{
@@ -31,7 +32,7 @@ header .logo{
 
 header nav a{
     text-decoration: none;
-    color: black;
+    color: var(--azul);
     margin-right: 10px;
 }
 
@@ -42,21 +43,64 @@ header nav a:hover{
 /* MANGA PRINCIPAL */
 .manga-principal{
     font-size: 24px;
-    background: url('../resources/fundo-berserk2.jpg');
+    background-image: url('../resources/fundo-berserk2.jpg');
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
 
-    height: 400px;
+    height: 600px;
     background-size: cover;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    padding-left: 10px;
+
+    border-radius: 5px;
 }
 
 .manga-principal .descricao{
-    margin-bottom: 90px;
+    margin-bottom: 50px;
+    margin-top: 12px;
 }
 
 .titulo{
     font-size: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 5%;
+}
+
+.botao{
+    background-color: rgba(0, 0, 0, .50);
+    border: none;
+    color: white;
+    padding: 20px 35px;
+    margin-right: 25px;
+    font-size: 12px;
+    border-radius: 10px;
+
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.botao:hover{
+    background-color: var(--hoverAzul);
+}
+
+.container{
+    margin-left: 20px;
+}
+
+.manga-principal .container{
+    width: 65%;
+}
+
+.box-manga{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrosel-mangas{
+    margin-top: 5px;
 }
